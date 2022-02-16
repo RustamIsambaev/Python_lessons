@@ -1,3 +1,4 @@
+# мой модуль
 def my_integer_number_input(my_question, not_positive_wrong_message, zero=False):
     while True:
         try:
