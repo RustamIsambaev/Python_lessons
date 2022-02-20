@@ -18,7 +18,7 @@ def my_integer_number_input(my_question, not_positive_wrong_message, zero=False,
             continue
 
 
-def my_float_number_input(my_question, not_positive_wrong_message, zero=False, enter=True):
+def my_float_number_input(my_question, not_positive_wrong_message, zero=False, enter=False):
     while True:
         try:
             my_var = input(my_question)
