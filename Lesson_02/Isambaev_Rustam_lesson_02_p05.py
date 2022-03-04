@@ -19,9 +19,18 @@ while True:
     if my_rating:
         if my_rating in my_list:
             my_list.insert(find_last_position(my_list, my_rating, my_list.index(my_rating)), my_rating)
-            print(my_list)
         else:
-            my_list.insert(0, my_rating)
-            print(my_list)
+            if my_rating > my_list[0]:
+                my_list.insert(0, my_rating)
+            else:
+                for i, v in enumerate(my_list,1):
+                    if i < len(my_list):
+                        if v > my_rating > my_list[i]:
+                            my_list.insert(i, my_rating)
+                            break
+                    else:
+                        my_list.insert(i, my_rating)
+                        break
+        print(my_list)
     else:
         break
